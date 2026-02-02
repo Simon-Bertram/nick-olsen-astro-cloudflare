@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Build / output
+dist/
+build/
+.astro/
+.output/
+.wrangler/
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+.dev.vars
+
+# Logs and debug
+*.log
+npm-debug.log*
+pnpm-debug.log*
+.npm
+.pnpm-store
+
+# OS and IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Optional: testing and coverage
+coverage/
+.nyc_output/
+
+# Optional: Sentry / tooling
+.sentryclirc
