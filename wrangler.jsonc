@@ -2,5 +2,25 @@
   // Top-level configuration
   "name": "nick-olsen-astro-cloudflare",
   "main": "src/server/index.ts",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
   "compatibility_date": "2026-02-03",
+  "route": "dev.example.com/*",
+  "vars": {
+    "ENVIRONMENT": "dev"
+  },
+  "env": {
+    "staging": {
+      "vars": {
+        "ENVIRONMENT": "staging"
+      }
+    },
+    "production": {
+      "vars": {
+        "ENVIRONMENT": "production"
+      }
+    }
+  }
 }

@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "client": "bun run --bun astro dev",
-    "build": "bun run --bun astro build",
+    "build:client": "bun run --bun astro build",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write .",
@@ -12,7 +12,9 @@
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx,astro}'",
     "lint:fix": "eslint 'src/**/*.{js,jsx,ts,tsx,astro}' --fix",
     "worker": "wrangler dev",
-    "dev": "concurrently \"bun run --bun client\" \"bun run worker\""
+    "dev": "concurrently \"bun run --bun client\" \"bun run worker\"",
+    "dryrun": "bun run build:client && wrangler deploy --dry-run --env staging",
+    "production": "bun run build:client && wrangler deploy --env production"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",

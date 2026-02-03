@@ -22,6 +22,7 @@ export const ServerStatus = () => {
   }, []);
   return (
     <div>
+      <h1>Server Status</h1>
       <p className="text-green-700">{status}</p>
       {error && (
         <p className="text-red-700">Error: {error?.message ?? String(error)}</p>
