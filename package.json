@@ -12,7 +12,7 @@
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx,astro}'",
     "lint:fix": "eslint 'src/**/*.{js,jsx,ts,tsx,astro}' --fix",
     "worker": "wrangler dev",
-    "dev": "concurrently \"bun run --bun client\" \"bun run --bun worker\""
+    "dev": "concurrently \"bun run --bun client\" \"bun run worker\""
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
