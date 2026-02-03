@@ -1,5 +1,5 @@
 {
-  "tailwindStylesheet": "./src/client/styles/global.css",
+  "tailwindStylesheet": "./src/styles/global.css",
 
   "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
   "overrides": [

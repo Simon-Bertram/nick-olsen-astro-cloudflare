@@ -4,4 +4,5 @@
     light --default,
     dark --prefersdark,
     dracula;
+  --color-muted: #6b7280;
 }
