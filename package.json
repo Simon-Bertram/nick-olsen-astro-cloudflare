@@ -13,8 +13,10 @@
     "lint:fix": "eslint 'src/**/*.{js,jsx,ts,tsx,astro}' --fix",
     "worker": "wrangler dev",
     "dev": "concurrently \"bun run --bun client\" \"bun run worker\"",
-    "dryrun": "bun run build:client && wrangler deploy --dry-run --env staging",
-    "production": "bun run build:client && wrangler deploy --env production"
+    "dryrun:staging": "bun run build:client && wrangler deploy --dry-run --env staging",
+    "dryrun:prod": "bun run build:client && wrangler deploy --dry-run --env production",
+    "deploy:staging": "bun run build:client && wrangler deploy --env staging",
+    "deploy:prod": "bun run build:client && wrangler deploy --env production"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
@@ -27,6 +29,7 @@
     "eslint-plugin-astro": "^1.5.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "hono": "^4.11.7",
+    "jose": "^6.1.3",
     "lucide-react": "^0.563.0",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
