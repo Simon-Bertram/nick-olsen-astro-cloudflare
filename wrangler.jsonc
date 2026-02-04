@@ -15,7 +15,8 @@
     {
       "binding": "DB",
       "database_name": "waiting_list_local_db",
-      "database_id": "1234567890"
+      "database_id": "1234567890",
+      "migrations_dir": "./src/server/db/migrations"
     }
   ],
   "env": {
@@ -29,7 +30,8 @@
         {
           "binding": "DB",
           "database_name": "waiting_list_staging_db",
-          "database_id": "1001e72f-221f-4cff-8f14-aa676f6152d0"
+          "database_id": "1001e72f-221f-4cff-8f14-aa676f6152d0",
+          "migrations_dir": "./src/server/db/migrations"
         }
       ]
     },
