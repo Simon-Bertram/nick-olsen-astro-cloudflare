@@ -1,35 +1,42 @@
 {
-	// Top-level configuration
-	"name": "nick-olsen-astro-cloudflare",
-	"main": "src/server/index.ts",
-	"assets": {
-		"directory": "./dist",
-		"binding": "ASSETS"
-	},
-	"compatibility_date": "2026-02-03",
-	// "route": "cornwallcoffee.co.uk/*",
-	"vars": {
-		"ENVIRONMENT": "development"
-	},
-	"env": {
-		"staging": {
-			"vars": {
-				"ENVIRONMENT": "staging",
-				"CF_ACCESS_DOMAIN": "https://simonbertram.cloudflareaccess.com",
-				"POLICY_AUD": "a2f1821766974381062c5eab2bcd719528cda55867b9f086b635cf99fe345f16"
-			}
-		},
-		"production": {
-			"vars": {
-				"ENVIRONMENT": "production"
-			}
-		}
-	},
-	"d1_databases": [
-		{
-			"binding": "DB",
-			"database_name": "waiting_list_staging_db",
-			"database_id": "1001e72f-221f-4cff-8f14-aa676f6152d0"
-		}
-	]
+  // Top-level configuration
+  "name": "nick-olsen-astro-cloudflare",
+  "main": "src/server/index.ts",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
+  "compatibility_date": "2026-02-03",
+  // "route": "cornwallcoffee.co.uk/*",
+  "vars": {
+    "ENVIRONMENT": "development"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "waiting_list_local_db",
+      "database_id": "1234567890"
+    }
+  ],
+  "env": {
+    "staging": {
+      "vars": {
+        "ENVIRONMENT": "staging",
+        "CF_ACCESS_DOMAIN": "https://simonbertram.cloudflareaccess.com",
+        "POLICY_AUD": "a2f1821766974381062c5eab2bcd719528cda55867b9f086b635cf99fe345f16"
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "waiting_list_staging_db",
+          "database_id": "1001e72f-221f-4cff-8f14-aa676f6152d0"
+        }
+      ]
+    },
+    "production": {
+      "vars": {
+        "ENVIRONMENT": "production"
+      }
+    }
+  }
 }
