@@ -2,6 +2,11 @@ import { createMiddleware } from "hono/factory";
 import { jwtVerify, createRemoteJWKSet } from "jose";
 
 export const authMiddleware = createMiddleware(async (c, next) => {
+  if (c.env.ENVIRONMENT === "development") {
+    await next();
+    return;
+  }
+
   // Verify the POLICY_AUD environment variable is set
   if (!c.env.POLICY_AUD) {
     return c.json({ error: "Missing required CF Access JWT" }, 403);
