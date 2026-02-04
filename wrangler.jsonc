@@ -9,7 +9,7 @@
   "compatibility_date": "2026-02-03",
   // "route": "cornwallcoffee.co.uk/*",
   "vars": {
-    "ENVIRONMENT": "dev"
+    "ENVIRONMENT": "development"
   },
   "env": {
     "staging": {
