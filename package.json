@@ -45,6 +45,7 @@
     "wrangler": "^4.62.0"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260203.0",
     "concurrently": "^9.2.1",
     "daisyui": "^5.5.17",
     "drizzle-kit": "^0.31.8",
