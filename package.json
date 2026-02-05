@@ -21,7 +21,11 @@
     "db:migrate:local": "wrangler d1 migrations apply waiting_list_local_db --local",
     "db:migrate:staging": "wrangler d1 migrations apply waiting_list_staging_db --remote --env staging",
     "db:migrate:prod": "wrangler d1 migrations apply waiting_list_prod_db --remote --env production",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "create:test:db": "bun run scripts/create-test-db.ts",
+    "destroy:test:db": "bun run scripts/destroy-test-db.ts",
+    "test:run": "echo 'No test runner configured. Add vitest or similar to test:run.'",
+    "test": "bun run create:test:db && bun run test:run && bun run destroy:test:db"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",

@@ -1,5 +1,0 @@
-{"location":"ServerStatus.tsx:useEffect","message":"fetch /api/health starting","data":{},"timestamp":1770134978939,"sessionId":"debug-session","hypothesisId":"H2,H3"}
-{"location":"ServerStatus.tsx:response","message":"response received","data":{"status":200,"ok":true,"contentType":"text/plain;charset=UTF-8"},"timestamp":1770134978956,"sessionId":"debug-session","hypothesisId":"H1,H4"}
-{"location":"ServerStatus.tsx:body","message":"body parsed","data":{"text":"OK. Healthy.","parsed":{"_raw":"OK. Healthy."},"hasMessage":false},"timestamp":1770134978957,"sessionId":"debug-session","hypothesisId":"H1,H4,H5","runId":"post-fix"}
-{"location":"ServerStatus.tsx:useEffect","message":"fetch /api/health starting","data":{},"timestamp":1770135018166,"sessionId":"debug-session","hypothesisId":"H2,H3"}
-{"location":"ServerStatus.tsx:catch","message":"fetch failed","data":{"errMessage":"NetworkError when attempting to fetch resource.","errName":"TypeError"},"timestamp":1770135170393,"sessionId":"debug-session","hypothesisId":"H2,H3"}
